@@ -19,19 +19,22 @@ export const App = () => {
   }
 
   return (
-    <Router>
+    <div>
       <header>
         <SelectBox doChange={changeLang} />
       </header>
-      <Redirect to={lang} />
-      <Switch>
-        <Route path='/en'>
-          <En />
-        </Route>
-        <Route path='/'>
-          <Ja />
-        </Route>
-      </Switch>
-    </Router>
+
+      <Router>
+        <Redirect to={lang} />
+        <Switch>
+          <Route path='/en'>
+            <En />
+          </Route>
+          <Route path='/'>
+            <Ja />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   )
 }

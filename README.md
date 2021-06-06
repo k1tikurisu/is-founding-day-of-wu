@@ -1,2 +1,2 @@
-# is it wakayama univ founded?
+# is Wakayama University founded?
 (university exercise)
