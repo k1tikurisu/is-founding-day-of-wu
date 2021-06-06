@@ -1,20 +1,29 @@
 import { 
-  HashRouter as Router, 
+  BrowserRouter as Router, 
   Switch,
   Route,
-  Link
+  Redirect
 } from 'react-router-dom'
+import React, { useState } from 'react'
 
 import { En } from './pages/En'
 import { Ja } from './pages/Ja'
+import { SelectBox } from './components/SelectBox'
 
 export const App = () => {
+  const [lang, setLang] = useState('/')
+  
+  const changeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault()
+    setLang(e.target.value)
+  }
+
   return (
     <Router>
-      <nav>
-        <Link to='/'>Japanese</Link>
-        <Link to='/en'>English</Link>
-      </nav>
+      <header>
+        <SelectBox doChange={changeLang} />
+      </header>
+      <Redirect to={lang} />
       <Switch>
         <Route path='/en'>
           <En />
