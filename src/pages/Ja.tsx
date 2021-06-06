@@ -1,13 +1,10 @@
-import { Helmet } from 'react-helmet'
 import { SearchDate } from '../components/SearchDate'
+import { SEO } from '../components/SEO'
 
 export const Ja = () => {
   return (
     <div>
-      <Helmet>
-        <title>和歌山大学の創立記念日ですか？</title>
-        <meta name="description" content="今日が和歌山大学の創立記念日かどうか確認できるサイトです。" />
-      </Helmet>
+      <SEO title="和歌山大学の創立記念日ですか？" description="今日が和歌山大学の創立記念日かどうか確認できるサイトです。" lang="ja" path="/" />
       <SearchDate Yes="はい" No="いいえ" />
     </div>
   )
