@@ -5,7 +5,7 @@ module.exports = {
   context: path.join(__dirname, 'src'),
   entry: path.join(__dirname, 'src', 'main.tsx'),
   output: {
-    path: path.join(__dirname, 'docs'),
+    path: path.join(__dirname, 'public'),
     filename: 'main.bundle.js',
   },
   mode: process.env.NODE_ENV || 'development',

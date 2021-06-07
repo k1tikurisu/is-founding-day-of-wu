@@ -1,5 +1,5 @@
 /node_modules/**
-/docs/**
+/public/**
 README.md
 yarn.lock
 package.json
