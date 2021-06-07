@@ -13,6 +13,7 @@ import { SelectBox } from './components/SelectBox'
 export const App: React.FC = () => {
   const [lang, setLang] = useState('/')
 
+  // redirect to 'lang' when SelectBox is changed.
   const changeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.preventDefault()
     setLang(e.target.value)
