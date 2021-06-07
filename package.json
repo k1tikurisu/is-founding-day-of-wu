@@ -1,11 +1,14 @@
 {
-  "name": "wu-founded",
+  "name": "is-founding-day-of-wu",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "eslint:fix": "eslint --ext .js,.ts,.tsx --ignore-path .prettierignore .",
+    "prettier:fix": "prettier . --write --ignore-path .prettierignore",
+    "format": "yarn eslint:fix && yarn prettier:fix"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -23,9 +26,16 @@
     "@types/react-dom": "^17.0.6",
     "@types/react-helmet": "^6.1.1",
     "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "prettier": "^2.3.1",
     "style-loader": "^2.0.0",
     "ts-loader": "^9.2.3",
     "webpack": "^5.38.1",

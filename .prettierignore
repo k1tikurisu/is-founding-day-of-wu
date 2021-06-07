@@ -1,0 +1,5 @@
+/node_modules/**
+/docs/**
+README.md
+yarn.lock
+package.json
