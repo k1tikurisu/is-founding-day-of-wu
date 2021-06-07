@@ -22,7 +22,7 @@ export const App: React.FC = () => {
   return (
     <div>
       <header>
-        <SelectBox doChange={changeLang} />
+        <SelectBox changeLang={changeLang} />
       </header>
 
       <Router>
