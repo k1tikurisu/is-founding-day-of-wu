@@ -8,7 +8,8 @@ import React, { useState } from 'react'
 
 import { En } from './pages/En'
 import { Ja } from './pages/Ja'
-import { SelectBox } from './components/SelectBox'
+import { SelectBox } from './components/Parts/SelectBox'
+import { Container } from './components/Layouts/Container'
 
 export const App: React.FC = () => {
   const [lang, setLang] = useState('/')
@@ -20,12 +21,11 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div>
-      <header>
-        <SelectBox changeLang={changeLang} />
-      </header>
-
-      <Router>
+    <Router>
+      <Container>
+        <header>
+          <SelectBox changeLang={changeLang} />
+        </header>
         <Redirect to={lang} />
         <Switch>
           <Route path="/en">
@@ -35,7 +35,7 @@ export const App: React.FC = () => {
             <Ja />
           </Route>
         </Switch>
-      </Router>
-    </div>
+      </Container>
+    </Router>
   )
 }

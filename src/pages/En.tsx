@@ -1,7 +1,7 @@
 import React from 'react'
-import { SearchDate } from '../components/SearchDate'
-import { SEO } from '../components/SEO'
-import { Footer } from '../components/Footer'
+import { SearchDate } from '../components/Parts/SearchDate'
+import { SEO } from '../components/Layouts/SEO'
+import { Footer } from '../components/Layouts/Footer'
 
 export const En: React.FC = () => {
   return (

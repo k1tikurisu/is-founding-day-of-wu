@@ -7,7 +7,7 @@ import { App } from './App'
 
 WebFont.load({
   google: {
-    families: ['Noto Sans JP:400,700', 'sans-serif'],
+    families: ['Noto Sans JP:400', 'sans-serif'],
   },
 })
 

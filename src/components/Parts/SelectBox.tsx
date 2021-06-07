@@ -6,8 +6,8 @@ type Props = {
 
 export const SelectBox: React.FC<Props> = ({ changeLang }) => {
   const langs = [
-    { name: 'JAPANESE', path: '/' },
-    { name: 'ENGLISH', path: '/en' },
+    { name: 'Japanese', path: '/' },
+    { name: 'English', path: '/en' },
   ]
 
   return (
