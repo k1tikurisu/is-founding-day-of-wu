@@ -20,7 +20,7 @@ export const SEO: React.FC<Props> = ({ title, description, lang, path }) => {
         },
         {
           property: 'og:url',
-          content: `https://daaiki.github.io/is-wu-founded${path}`,
+          content: `https://daaiki.github.io/is-founding-day-of-wu${path}`,
         },
         {
           property: 'og:title',
