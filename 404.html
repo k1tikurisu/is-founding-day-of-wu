@@ -33,6 +33,7 @@
         if (url.searchParams.get('NotFound') === 'true') {
           url.searchParams.delete('NotFound')
           window.history.replaceState(null, null, url.href)
+          return
         }
 
         // https://name.github.io/
