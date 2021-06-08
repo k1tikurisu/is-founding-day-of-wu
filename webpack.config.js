@@ -8,7 +8,6 @@ module.exports = {
     path: path.join(__dirname, 'public'),
     filename: 'main.bundle.js',
   },
-  mode: process.env.NODE_ENV || 'development',
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -25,6 +24,7 @@ module.exports = {
     ],
   },
   plugins: [
+    // generate default index.html
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
     }),

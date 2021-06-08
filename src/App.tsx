@@ -13,6 +13,11 @@ import styled from 'styled-components'
 import { color, fontSize } from './styles/Utils'
 import { GlobalStyle, Container } from './styles/GlobalStyles'
 
+// defining the env
+// localhost or github pages
+const isDev = process.env.NODE_ENV === 'development'
+const BASE_URL = isDev ? '' : '/is-founding-day-of-wu'
+
 export const App: React.FC = () => {
   const [lang, setLang] = useState('/')
 
@@ -41,10 +46,10 @@ export const App: React.FC = () => {
             )
           })}
         </Select>
-        <Redirect to={lang} />
+        <Redirect to={BASE_URL + lang} />
         <Switch>
-          <Route path="/en" component={en} />
-          <Route path="/" component={ja} />
+          <Route path={`${BASE_URL}/en`} component={en} />
+          <Route path={`${BASE_URL}/`} component={ja} />
         </Switch>
       </Container>
     </Router>
