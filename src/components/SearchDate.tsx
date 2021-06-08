@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import { HeadLine } from '../styles/GlobalStyles'
 
 type Props = {
   Yes: string
@@ -28,8 +30,12 @@ export const SearchDate: React.FC<Props> = ({ Yes, No }) => {
   }, [date])
 
   return (
-    <section>
-      <h1>{isFounded ? Yes : No}</h1>
-    </section>
+    <Section>
+      <HeadLine>{isFounded ? Yes : No}</HeadLine>
+    </Section>
   )
 }
+
+const Section = styled.section`
+  margin-top: 150px;
+`
