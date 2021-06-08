@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "SET NODE_ENV=development && webpack serve --mode=development --open",
     "build": "NODE_ENV=production webpack --mode=production",
+    "build:windows": "SET NODE_ENV=production && webpack --mode=production",
     "lint:eslint": "eslint --ext .js,.ts,.tsx --ignore-path .prettierignore .",
     "lint:prettier": "prettier . --check --ignore-path .prettierignore",
     "format": "yarn lint:eslint && yarn lint:prettier --write",
