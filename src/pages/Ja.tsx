@@ -3,7 +3,7 @@ import { SearchDate } from '../components/Parts/SearchDate'
 import { SEO } from '../components/Layouts/SEO'
 import { Footer } from '../components/Layouts/Footer'
 
-export const Ja: React.FC = () => {
+export const ja: React.FC = () => {
   return (
     <div>
       <SEO
