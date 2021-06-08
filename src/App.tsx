@@ -8,7 +8,7 @@ import React, { useState } from 'react'
 
 import { en } from './pages/en'
 import { ja } from './pages/ja'
-import { NotFound } from './pages/404'
+import { NotFound } from './pages/notFound'
 
 import styled from 'styled-components'
 import { color, fontSize } from './styles/Utils'
@@ -17,15 +17,15 @@ import { GlobalStyle, Container } from './styles/GlobalStyles'
 // defining the env
 // localhost or github pages
 const isDev = process.env.NODE_ENV === 'development'
-const BASE_URL = isDev ? '' : '/is-founding-day-of-wu'
+const BASE_URL = isDev ? '/' : '/is-founding-day-of-wu/'
 
 export const App: React.FC = () => {
-  const [lang, setLang] = useState('/')
+  const [lang, setLang] = useState('')
 
   // select box
   const langs = [
-    { name: 'Japanese', path: '/' },
-    { name: 'English', path: '/en' },
+    { name: 'Japanese', path: '' },
+    { name: 'English', path: 'en' },
   ]
 
   // redirect to 'lang' when SelectBox is changed.
@@ -49,8 +49,8 @@ export const App: React.FC = () => {
         </Select>
         <Redirect to={BASE_URL + lang} />
         <Switch>
-          <Route path={`${BASE_URL}/en`} component={en} />
-          <Route path={`${BASE_URL}/`} component={ja} />
+          <Route path={`${BASE_URL}en`} component={en} />
+          <Route path={`${BASE_URL}`} component={ja} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Container>

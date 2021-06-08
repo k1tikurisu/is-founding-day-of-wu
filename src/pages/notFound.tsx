@@ -8,7 +8,7 @@ export const NotFound: React.FC = () => {
   useEffect(() => {
     if (!isDev) {
       const url = new URL(window.location.toString())
-      url.searchParams.append('NotFound', 'true')
+      url.searchParams.append('notFound', 'true')
       window.location.replace(url.href)
     }
   })
