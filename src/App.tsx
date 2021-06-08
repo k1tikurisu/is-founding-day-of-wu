@@ -8,6 +8,7 @@ import React, { useState } from 'react'
 
 import { en } from './pages/en'
 import { ja } from './pages/ja'
+import { NotFound } from './pages/404'
 
 import styled from 'styled-components'
 import { color, fontSize } from './styles/Utils'
@@ -50,6 +51,7 @@ export const App: React.FC = () => {
         <Switch>
           <Route path={`${BASE_URL}/en`} component={en} />
           <Route path={`${BASE_URL}/`} component={ja} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </Container>
     </Router>

@@ -27,6 +27,14 @@
         // url to be accessed
         // https://name.github.io/repo-name/hoge/piyo
 
+        const url = new URL(window.location)
+
+        // from src/page/404.tsx to 404.html
+        if (url.searchParams.get('NotFound') === 'true') {
+          url.searchParams.delete('NotFound')
+          window.history.replaceState(null, null, url.href)
+        }
+
         // https://name.github.io/
         const originUrl = window.location.origin
 
@@ -46,5 +54,7 @@
       }
       historyApiFallback()
     </script>
+
+    <h1>404 Error, Page Not Found</h1>
   </body>
 </html>
