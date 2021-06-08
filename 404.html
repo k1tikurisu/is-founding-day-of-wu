@@ -25,33 +25,30 @@
     <script type="text/javascript">
       const historyApiFallback = () => {
         // url to be accessed
-        // https://name.github.io/repo-name/hoge/piyo
+        // https://name.github.io/repo-name/hoge
 
         const url = new URL(window.location)
 
         // from src/page/404.tsx to 404.html
-        if (url.searchParams.get('NotFound') === 'true') {
-          url.searchParams.delete('NotFound')
+        if (url.searchParams.get('notFound') === 'true') {
+          url.searchParams.delete('notFound')
           window.history.replaceState(null, null, url.href)
           return
         }
 
-        // https://name.github.io/
-        const originUrl = window.location.origin
+        // ['', repo-name, hoge]
+        const pathList = window.location.pathname.split('/')
 
-        // [repo-name, hoge, piyo]
-        const pathList = window.location.pathname.split('/').slice(1)
+        // /repo-name/
+        url.pathname = `/${pathList[1]}/`
 
-        const repoName = pathList.slice(0, 1)
-        const queryParams = pathList.slice(1).join('/')
+        // create url and add query params
+        pathList.splice(0, 2)
+        const queryParams = pathList.map((item) => `/${item}`).join('')
+        url.searchParams.append('originalPath', queryParams)
 
-        // redirect to https://name.github.io/repo-name/
-        // (add query params with URI encoded)
-        const newUrl = `${originUrl}/${repoName}?originalPath=${encodeURIComponent(
-          queryParams
-        )}`
-
-        window.location.replace(newUrl)
+        // redirect to https://name.github.io/repo-name/?originalPath=/hoge
+        window.location.replace(url.href)
       }
       historyApiFallback()
     </script>
