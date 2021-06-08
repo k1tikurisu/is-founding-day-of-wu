@@ -17,6 +17,26 @@
   <body>
     <noscript> You need to enable JavaScript to run this app </noscript>
 
+    <script>
+      const historyApiFallback = () => {
+        // decode to original params
+        // solve using React Router
+        const url = new URL(window.location)
+        const originalPath = decodeURIComponent(
+          url.searchParams.get('originalPath')
+        )
+
+        // run if there are params (it was added by 404 page script)
+        if (originalPath) {
+          url.pathname = `${url.pathname.split('/')[1]}/${originalPath}`
+          url.searchParams.delete('originalPath')
+          window.history.replaceState(null, null, url.href)
+        }
+
+        historyApiFallback()
+      }
+    </script>
+
     <div id="root"></div>
   </body>
 </html>
