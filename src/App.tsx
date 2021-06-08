@@ -1,10 +1,5 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom'
-import React, { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import React from 'react'
 
 import { en } from './pages/en'
 import { ja } from './pages/ja'
@@ -20,34 +15,15 @@ const isDev = process.env.NODE_ENV === 'development'
 const BASE_URL = isDev ? '/' : '/is-founding-day-of-wu/'
 
 export const App: React.FC = () => {
-  const [lang, setLang] = useState('')
-
-  // select box
-  const langs = [
-    { name: 'Japanese', path: '' },
-    { name: 'English', path: 'en' },
-  ]
-
-  // redirect to 'lang' when SelectBox is changed.
-  const changeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    e.preventDefault()
-    setLang(e.target.value)
-  }
-
   return (
     <Router>
       <GlobalStyle />
       <Container>
-        <Select name="language" onChange={changeLang}>
-          {langs.map((lang) => {
-            return (
-              <option key={lang.name} value={lang.path}>
-                {lang.name}
-              </option>
-            )
-          })}
-        </Select>
-        <Redirect to={BASE_URL + lang} />
+        <Language>
+          <StyledLink to={`${BASE_URL}`}>Japanese</StyledLink>
+          <Span>/</Span>
+          <StyledLink to={`${BASE_URL}en`}>English</StyledLink>
+        </Language>
         <Switch>
           <Route path={`${BASE_URL}en`} component={en} />
           <Route path={`${BASE_URL}`} component={ja} />
@@ -58,15 +34,29 @@ export const App: React.FC = () => {
   )
 }
 
-const Select = styled.select`
+const Language = styled.div`
   font-size: ${fontSize.textBase};
-  padding: 3px 10px;
-  margin: 0 0 0 auto;
-  display: block;
-  text-align-last: center;
-  color: ${color.textDefault};
-  cursor: pointer;
-  border: 2px solid ${color.textDefault};
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  display: flex;
+  justify-content: flex-end;
 `
+
+const Span = styled.span`
+  color: ${color.textDefault};
+  font-size: ${fontSize.textBase};
+  margin-left: 4px;
+  margin-right: 4px;
+`
+
+const LinkA = styled.a`
+  color: ${color.textDefault};
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
+`
+
+// add style to Link
+const StyledLink = LinkA.withComponent(Link)
