@@ -5683,7 +5683,7 @@ var App_templateObject_1, App_templateObject_2, App_templateObject_3;
 
 webfontloader_default().load({
     google: {
-        families: ['Noto Sans JP:400', 'sans-serif'],
+        families: ['Noto Sans JP:400&display=swap', 'sans-serif'],
     },
 });
 react_dom.render((0,jsx_runtime.jsx)(App, {}, void 0), document.getElementById('root'));
