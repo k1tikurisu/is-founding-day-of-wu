@@ -3875,6 +3875,11 @@ var fontSize = {
     textXl: '120px',
     text2Xl: '150px',
 };
+var breakPoint = {
+    sm: '450px',
+    md: '600px',
+    lg: '1000px',
+};
 
 // EXTERNAL MODULE: ../node_modules/shallowequal/index.js
 var shallowequal = __webpack_require__(445);
@@ -4611,7 +4616,7 @@ var SearchDate = function (_a) {
     }, [date]);
     return ((0,jsx_runtime.jsx)(Section, { children: (0,jsx_runtime.jsx)(HeadLine, { children: isFounded ? Yes : No }, void 0) }, void 0));
 };
-var Section = styled_components_browser_esm.section(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin-top: 150px;\n"], ["\n  margin-top: 150px;\n"])));
+var Section = styled_components_browser_esm.section(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin-top: 120px;\n  @media screen and (min-width: ", ") {\n    margin-top: 150px;\n  }\n"], ["\n  margin-top: 120px;\n  @media screen and (min-width: ", ") {\n    margin-top: 150px;\n  }\n"])), breakPoint.sm);
 var HeadLine = styled_components_browser_esm.h1(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"], ["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"])), color.textDefault, fontSize.textLg, fontSize.textXl, fontSize.text2Xl);
 var templateObject_1, templateObject_2;
 
@@ -5574,7 +5579,7 @@ var Footer = function (_a) {
     var isJapan = _a.isJapan;
     return ((0,jsx_runtime.jsx)("footer", { children: isJapan ? ((0,jsx_runtime.jsxs)(Small, { children: [(0,jsx_runtime.jsx)(LinkTo, __assign({ href: "https://www.wakayama-u.ac.jp/" }, { children: "\u548C\u6B4C\u5C71\u5927\u5B66" }), void 0), "\u306B\u3064\u3044\u3066\u3082\u3063\u3068\u5B66\u3076"] }, void 0)) : ((0,jsx_runtime.jsxs)(Small, { children: ["More learn about\u2009", (0,jsx_runtime.jsx)(LinkTo, __assign({ href: "http://www.wakayama-u.ac.jp/en/" }, { children: "Wakayama University" }), void 0)] }, void 0)) }, void 0));
 };
-var Small = styled_components_browser_esm.small(Footer_templateObject_1 || (Footer_templateObject_1 = Footer_makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  text-align: center;\n  display: block;\n  margin-top: 200px;\n"], ["\n  font-size: ", ";\n  color: ", ";\n  text-align: center;\n  display: block;\n  margin-top: 200px;\n"])), fontSize.textBase, color.textDefault);
+var Small = styled_components_browser_esm.small(Footer_templateObject_1 || (Footer_templateObject_1 = Footer_makeTemplateObject(["\n  font-size: ", ";\n  color: ", ";\n  text-align: center;\n  display: block;\n  margin-top: 150px;\n\n  @media screen and (min-width: 450px) {\n    margin-top: 200px;\n  }\n"], ["\n  font-size: ", ";\n  color: ", ";\n  text-align: center;\n  display: block;\n  margin-top: 150px;\n\n  @media screen and (min-width: 450px) {\n    margin-top: 200px;\n  }\n"])), fontSize.textBase, color.textDefault);
 var LinkTo = styled_components_browser_esm.a(Footer_templateObject_2 || (Footer_templateObject_2 = Footer_makeTemplateObject(["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"], ["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"])), color.textAccent);
 var Footer_templateObject_1, Footer_templateObject_2;
 
@@ -5663,7 +5668,7 @@ var App = function () {
                             (0,jsx_runtime.jsx)(Route, { path: BASE_URL + "en", component: en }, void 0),
                             (0,jsx_runtime.jsx)(Route, { path: "*", component: NotFound }, void 0)] }, void 0)] }, void 0)] }, void 0));
 };
-var Container = styled_components_browser_esm.div(App_templateObject_1 || (App_templateObject_1 = App_makeTemplateObject(["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: 600px) {\n    max-width: 400px;\n  }\n  @media screen and (min-width: 1000px) {\n    max-width: 800px;\n  }\n"], ["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: 600px) {\n    max-width: 400px;\n  }\n  @media screen and (min-width: 1000px) {\n    max-width: 800px;\n  }\n"])));
+var Container = styled_components_browser_esm.div(App_templateObject_1 || (App_templateObject_1 = App_makeTemplateObject(["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: ", ") {\n    max-width: 400px;\n  }\n  @media screen and (min-width: ", ") {\n    max-width: 800px;\n  }\n"], ["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: ", ") {\n    max-width: 400px;\n  }\n  @media screen and (min-width: ", ") {\n    max-width: 800px;\n  }\n"])), breakPoint.md, breakPoint.lg);
 var Language = styled_components_browser_esm.div(App_templateObject_2 || (App_templateObject_2 = App_makeTemplateObject(["\n  font-size: ", ";\n  display: flex;\n  justify-content: flex-end;\n"], ["\n  font-size: ", ";\n  display: flex;\n  justify-content: flex-end;\n"])), fontSize.textBase);
 var Span = styled_components_browser_esm.span(templateObject_3 || (templateObject_3 = App_makeTemplateObject(["\n  color: ", ";\n  font-size: ", ";\n  margin-left: 4px;\n  margin-right: 4px;\n"], ["\n  color: ", ";\n  font-size: ", ";\n  margin-left: 4px;\n  margin-right: 4px;\n"])), color.textDefault, fontSize.textBase);
 var LinkA = styled_components_browser_esm.a(templateObject_4 || (templateObject_4 = App_makeTemplateObject(["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"], ["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"
