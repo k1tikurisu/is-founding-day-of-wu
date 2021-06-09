@@ -4571,9 +4571,8 @@ function v(){return(v=Object.assign||function(e){for(var t=1;t<arguments.length;
 
 ;// CONCATENATED MODULE: ./styles/Utils.ts
 var color = {
-    textDark: '#4A4A4A',
-    textDefault: '#808080',
-    textAccent: '#6A95FC',
+    textDefault: '#4A4A4A',
+    textAccent: '#0D47A1',
 };
 var fontSize = {
     textBase: '16px',
@@ -4591,7 +4590,7 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 var GlobalStyle = $e(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  body {\n    font-family: 'Noto Sans JP', sans-serif;\n    background-color: #FAFAFA;\n  }\n"], ["\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  body {\n    font-family: 'Noto Sans JP', sans-serif;\n    background-color: #FAFAFA;\n  }\n"])));
 var Container = styled_components_browser_esm.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: 600px) {\n    max-width: 400px;\n  }\n  @media screen and (min-width: 1000px) {\n    max-width: 800px;\n  }\n"], ["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: 600px) {\n    max-width: 400px;\n  }\n  @media screen and (min-width: 1000px) {\n    max-width: 800px;\n  }\n"])));
-var HeadLine = styled_components_browser_esm.h1(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"], ["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"])), color.textDark, fontSize.textLg, fontSize.textXl, fontSize.text2Xl);
+var HeadLine = styled_components_browser_esm.h1(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"], ["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"])), color.textDefault, fontSize.textLg, fontSize.textXl, fontSize.text2Xl);
 var templateObject_1, templateObject_2, templateObject_3;
 
 ;// CONCATENATED MODULE: ./components/SearchDate.tsx
