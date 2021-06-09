@@ -15,6 +15,10 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'src'),
+    // use index.html to mount the SPA
+    historyApiFallback: {
+      rewrites: [{ from: /^\/*/, to: '/index.html' }],
+    },
   },
   module: {
     rules: [
