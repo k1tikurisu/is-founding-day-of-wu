@@ -5602,8 +5602,18 @@ var ja = function () {
 
 ;// CONCATENATED MODULE: ./pages/notFound.tsx
 
+
 var isDev = "production" === 'development';
 var NotFound = function () {
+    (0,react.useEffect)(function () {
+        // if production env, go to a 404.html with a query parameter
+        // dev env, return jsx
+        if (!isDev) {
+            var url = new URL(window.location.href);
+            url.searchParams.append('notFound', 'true');
+            window.location.replace(url.href);
+        }
+    });
     return !isDev ? null : (0,jsx_runtime.jsx)("h1", { children: "404 Error. Page Not Found." }, void 0);
 };
 
