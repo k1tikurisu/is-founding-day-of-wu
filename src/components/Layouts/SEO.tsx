@@ -8,6 +8,7 @@ type Props = {
   path: string
 }
 
+// generate head
 export const SEO: React.FC<Props> = ({ title, description, lang, path }) => {
   return (
     <Helmet
