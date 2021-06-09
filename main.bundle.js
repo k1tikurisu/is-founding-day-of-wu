@@ -5528,6 +5528,7 @@ HelmetExport.renderStatic = HelmetExport.rewind;
 ;// CONCATENATED MODULE: ./components/Layouts/SEO.tsx
 
 
+// generate head
 var SEO = function (_a) {
     var title = _a.title, description = _a.description, lang = _a.lang, path = _a.path;
     return ((0,jsx_runtime.jsx)(HelmetExport, { title: title, htmlAttributes: { lang: lang }, meta: [
@@ -5601,18 +5602,8 @@ var ja = function () {
 
 ;// CONCATENATED MODULE: ./pages/notFound.tsx
 
-
 var isDev = "production" === 'development';
-// path='*'
-// when accessed, go to a 404 page with a query parameter
 var NotFound = function () {
-    (0,react.useEffect)(function () {
-        if (!isDev) {
-            var url = new URL(window.location.href);
-            url.searchParams.append('notFound', 'true');
-            window.location.replace(url.href);
-        }
-    });
     return !isDev ? null : (0,jsx_runtime.jsx)("h1", { children: "404 Error. Page Not Found." }, void 0);
 };
 
