@@ -32,8 +32,6 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      # copy 404.html in GitHub Actions
-      - run: cp ./src/404.html ./public/404.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin')
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -23,10 +25,17 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [new HtmlMinimizerPlugin()],
+  },
   plugins: [
     // generate default index.html
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
+    }),
+    new CopyPlugin({
+      patterns: [{ from: '404.html', to: './' }],
     }),
   ],
 }
