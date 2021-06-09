@@ -31,7 +31,11 @@ const Small = styled.small`
   color: ${color.textDefault};
   text-align: center;
   display: block;
-  margin-top: 200px;
+  margin-top: 150px;
+
+  @media screen and (min-width: 450px) {
+    margin-top: 200px;
+  }
 `
 
 const LinkTo = styled.a`

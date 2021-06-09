@@ -6,7 +6,7 @@ import { ja } from './pages/ja'
 import { NotFound } from './pages/notFound'
 
 import styled from 'styled-components'
-import { color, fontSize } from './styles/Utils'
+import { color, fontSize, breakPoint } from './styles/Utils'
 import { GlobalStyle } from './styles/GlobalStyles'
 
 // defining the env
@@ -38,10 +38,10 @@ const Container = styled.div`
   max-width: 260px;
   margin: 60px auto 0 auto;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: ${breakPoint.md}) {
     max-width: 400px;
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: ${breakPoint.lg}) {
     max-width: 800px;
   }
 `

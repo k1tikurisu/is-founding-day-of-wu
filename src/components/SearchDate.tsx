@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { color, fontSize } from '../styles/Utils'
+import { color, fontSize, breakPoint } from '../styles/Utils'
 import styled from 'styled-components'
 
 type Props = {
@@ -37,7 +37,10 @@ export const SearchDate: React.FC<Props> = ({ Yes, No }) => {
 }
 
 const Section = styled.section`
-  margin-top: 150px;
+  margin-top: 120px;
+  @media screen and (min-width: ${breakPoint.sm}) {
+    margin-top: 150px;
+  }
 `
 
 const HeadLine = styled.h1`

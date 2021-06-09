@@ -9,3 +9,9 @@ export const fontSize = {
   textXl: '120px',
   text2Xl: '150px',
 }
+
+export const breakPoint = {
+  sm: '450px',
+  md: '600px',
+  lg: '1000px',
+}
