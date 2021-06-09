@@ -26,7 +26,7 @@ export const Container = styled.div`
 `
 
 export const HeadLine = styled.h1`
-  color: ${color.textDark};
+  color: ${color.textDefault};
   text-align: center;
   font-weight: 400;
   font-size: ${fontSize.textLg};

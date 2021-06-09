@@ -1,7 +1,6 @@
 export const color = {
-  textDark: '#4A4A4A',
-  textDefault: '#808080',
-  textAccent: '#6A95FC',
+  textDefault: '#4A4A4A',
+  textAccent: '#0D47A1',
 }
 
 export const fontSize = {
