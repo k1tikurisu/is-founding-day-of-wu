@@ -25,8 +25,8 @@ export const App: React.FC = () => {
           <StyledLink to={`${BASE_URL}en`}>English</StyledLink>
         </Language>
         <Switch>
+          <Route exact path={`${BASE_URL}`} component={ja} />
           <Route path={`${BASE_URL}en`} component={en} />
-          <Route path={`${BASE_URL}`} component={ja} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Container>

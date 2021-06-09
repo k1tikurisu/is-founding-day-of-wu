@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development'
 export const NotFound: React.FC = () => {
   useEffect(() => {
     if (!isDev) {
-      const url = new URL(window.location.toString())
+      const url = new URL(window.location.href)
       url.searchParams.append('notFound', 'true')
       window.location.replace(url.href)
     }
