@@ -29,13 +29,6 @@
 
         const url = new URL(window.location)
 
-        // from src/page/404.tsx to 404.html
-        if (url.searchParams.get('notFound') === 'true') {
-          url.searchParams.delete('notFound')
-          window.history.replaceState(null, null, url.href)
-          return
-        }
-
         // ['', repo-name, hoge]
         const pathList = window.location.pathname.split('/')
 
