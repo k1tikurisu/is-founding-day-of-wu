@@ -13,5 +13,5 @@ export const NotFound: React.FC = () => {
     }
   })
 
-  return !isDev ? null : <div>Not Found.</div>
+  return !isDev ? null : <h1>404 Error. Page Not Found.</h1>
 }

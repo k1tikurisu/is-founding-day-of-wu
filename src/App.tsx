@@ -7,7 +7,7 @@ import { NotFound } from './pages/notFound'
 
 import styled from 'styled-components'
 import { color, fontSize } from './styles/Utils'
-import { GlobalStyle, Container } from './styles/GlobalStyles'
+import { GlobalStyle } from './styles/GlobalStyles'
 
 // defining the env
 // localhost or github pages
@@ -33,6 +33,18 @@ export const App: React.FC = () => {
     </Router>
   )
 }
+
+const Container = styled.div`
+  max-width: 260px;
+  margin: 60px auto 0 auto;
+
+  @media screen and (min-width: 600px) {
+    max-width: 400px;
+  }
+  @media screen and (min-width: 1000px) {
+    max-width: 800px;
+  }
+`
 
 const Language = styled.div`
   font-size: ${fontSize.textBase};

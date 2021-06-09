@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { color, fontSize } from '../styles/Utils'
 import styled from 'styled-components'
-import { HeadLine } from '../styles/GlobalStyles'
 
 type Props = {
   Yes: string
@@ -38,4 +38,18 @@ export const SearchDate: React.FC<Props> = ({ Yes, No }) => {
 
 const Section = styled.section`
   margin-top: 150px;
+`
+
+const HeadLine = styled.h1`
+  color: ${color.textDefault};
+  text-align: center;
+  font-weight: 400;
+  font-size: ${fontSize.textLg};
+
+  @media screen and (min-width: 600px) {
+    font-size: ${fontSize.textXl};
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: ${fontSize.text2Xl};
+  }
 `
