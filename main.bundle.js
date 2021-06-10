@@ -5679,8 +5679,8 @@ var Footer_templateObject_1, Footer_templateObject_2;
 
 var English = function () {
     return ((0,jsx_runtime.jsxs)(jsx_runtime.Fragment, { children: [(0,jsx_runtime.jsx)(SEO, { title: "Is founding day of wakayama university?", description: "This is the site where you can check if today is the anniversary of Wakayama University's founding.", lang: "en", path: "/en" }, void 0),
-            (0,jsx_runtime.jsx)(SearchDate, {}, void 0),
-            (0,jsx_runtime.jsx)(Footer, {}, void 0)] }, void 0));
+            (0,jsx_runtime.jsx)(SearchDate, { isJapan: false }, void 0),
+            (0,jsx_runtime.jsx)(Footer, { isJapan: false }, void 0)] }, void 0));
 };
 
 ;// CONCATENATED MODULE: ./pages/Japanese.tsx
