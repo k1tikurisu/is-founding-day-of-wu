@@ -12,7 +12,7 @@
     "format": "yarn lint:eslint && yarn lint:prettier --write",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook -o ./public/storybook/"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
