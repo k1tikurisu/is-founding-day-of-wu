@@ -21,12 +21,8 @@ module.exports = {
     },
     // make it accessible from docker containers
     host: '0.0.0.0',
-    port: 3000,
+    port: 8080,
     hot: true,
-    watchOptions: {
-      aggregateTimeout: 600,
-      poll: 1000,
-    },
   },
   module: {
     rules: [
