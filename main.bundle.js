@@ -1687,7 +1687,7 @@ var react_dom = __webpack_require__(542);
 // EXTERNAL MODULE: ../node_modules/webfontloader/webfontloader.js
 var webfontloader = __webpack_require__(596);
 var webfontloader_default = /*#__PURE__*/__webpack_require__.n(webfontloader);
-;// CONCATENATED MODULE: ../node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+;// CONCATENATED MODULE: ../node_modules/react-router/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
 function _setPrototypeOf(o, p) {
   _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
     o.__proto__ = p;
@@ -1696,7 +1696,7 @@ function _setPrototypeOf(o, p) {
 
   return _setPrototypeOf(o, p);
 }
-;// CONCATENATED MODULE: ../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+;// CONCATENATED MODULE: ../node_modules/react-router/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
 
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
@@ -1708,7 +1708,7 @@ var react = __webpack_require__(378);
 // EXTERNAL MODULE: ../node_modules/prop-types/index.js
 var prop_types = __webpack_require__(615);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-;// CONCATENATED MODULE: ../node_modules/@babel/runtime/helpers/esm/extends.js
+;// CONCATENATED MODULE: ../node_modules/history/node_modules/@babel/runtime/helpers/esm/extends.js
 function extends_extends() {
   extends_extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -2739,6 +2739,22 @@ function createMemoryHistory(props) {
 
 
 
+;// CONCATENATED MODULE: ../node_modules/mini-create-react-context/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function setPrototypeOf_setPrototypeOf(o, p) {
+  setPrototypeOf_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return setPrototypeOf_setPrototypeOf(o, p);
+}
+;// CONCATENATED MODULE: ../node_modules/mini-create-react-context/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+
+function inheritsLoose_inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  setPrototypeOf_setPrototypeOf(subClass, superClass);
+}
 ;// CONCATENATED MODULE: ../node_modules/mini-create-react-context/dist/esm/index.js
 
 
@@ -2794,7 +2810,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
   var contextProp = '__create-react-context-' + getUniqueId() + '__';
 
   var Provider = /*#__PURE__*/function (_Component) {
-    _inheritsLoose(Provider, _Component);
+    inheritsLoose_inheritsLoose(Provider, _Component);
 
     function Provider() {
       var _this;
@@ -2844,7 +2860,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
   Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = (prop_types_default()).object.isRequired, _Provider$childContex);
 
   var Consumer = /*#__PURE__*/function (_Component2) {
-    _inheritsLoose(Consumer, _Component2);
+    inheritsLoose_inheritsLoose(Consumer, _Component2);
 
     function Consumer() {
       var _this2;
@@ -2915,12 +2931,30 @@ var index = react.createContext || createReactContext;
 
 /* harmony default export */ const esm = (index);
 
+;// CONCATENATED MODULE: ../node_modules/react-router/node_modules/@babel/runtime/helpers/esm/extends.js
+function esm_extends_extends() {
+  esm_extends_extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return esm_extends_extends.apply(this, arguments);
+}
 // EXTERNAL MODULE: ../node_modules/react-router/node_modules/path-to-regexp/index.js
 var path_to_regexp = __webpack_require__(39);
 var path_to_regexp_default = /*#__PURE__*/__webpack_require__.n(path_to_regexp);
 // EXTERNAL MODULE: ../node_modules/react-is/index.js
 var react_is = __webpack_require__(185);
-;// CONCATENATED MODULE: ../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+;// CONCATENATED MODULE: ../node_modules/react-router/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
 function objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
   var target = {};
@@ -3348,7 +3382,7 @@ function (_React$Component) {
       var match = _this.props.computedMatch ? _this.props.computedMatch // <Switch> already computed the match for us
       : _this.props.path ? matchPath(location.pathname, _this.props) : context$1.match;
 
-      var props = extends_extends({}, context$1, {
+      var props = esm_extends_extends({}, context$1, {
         location: location,
         match: match
       });
@@ -3380,7 +3414,7 @@ function react_router_addLeadingSlash(path) {
 
 function addBasename(basename, location) {
   if (!basename) return location;
-  return extends_extends({}, location, {
+  return esm_extends_extends({}, location, {
     pathname: react_router_addLeadingSlash(basename) + location.pathname
   });
 }
@@ -3389,7 +3423,7 @@ function react_router_stripBasename(basename, location) {
   if (!basename) return location;
   var base = react_router_addLeadingSlash(basename);
   if (location.pathname.indexOf(base) !== 0) return location;
-  return extends_extends({}, location, {
+  return esm_extends_extends({}, location, {
     pathname: location.pathname.substr(base.length)
   });
 }
@@ -3483,7 +3517,7 @@ function (_React$Component) {
       listen: this.handleListen,
       block: this.handleBlock
     };
-    return react.createElement(Router, extends_extends({}, rest, {
+    return react.createElement(Router, esm_extends_extends({}, rest, {
       history: history,
       staticContext: context
     }));
@@ -3524,7 +3558,7 @@ function (_React$Component) {
         if (match == null && react.isValidElement(child)) {
           element = child;
           var path = child.props.path || child.props.from;
-          match = path ? matchPath(location.pathname, extends_extends({}, child.props, {
+          match = path ? matchPath(location.pathname, esm_extends_extends({}, child.props, {
             path: path
           })) : context.match;
         }
@@ -3598,6 +3632,55 @@ if (false) { var secondaryBuildName, initialBuildName, buildNames, key, global; 
 
 //# sourceMappingURL=react-router.js.map
 
+;// CONCATENATED MODULE: ../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function esm_setPrototypeOf_setPrototypeOf(o, p) {
+  esm_setPrototypeOf_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return esm_setPrototypeOf_setPrototypeOf(o, p);
+}
+;// CONCATENATED MODULE: ../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+
+function esm_inheritsLoose_inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  esm_setPrototypeOf_setPrototypeOf(subClass, superClass);
+}
+;// CONCATENATED MODULE: ../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/extends.js
+function helpers_esm_extends_extends() {
+  helpers_esm_extends_extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return helpers_esm_extends_extends.apply(this, arguments);
+}
+;// CONCATENATED MODULE: ../node_modules/react-router-dom/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+function esm_objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
 ;// CONCATENATED MODULE: ../node_modules/react-router-dom/esm/react-router-dom.js
 
 
@@ -3617,7 +3700,7 @@ if (false) { var secondaryBuildName, initialBuildName, buildNames, key, global; 
 var BrowserRouter =
 /*#__PURE__*/
 function (_React$Component) {
-  _inheritsLoose(BrowserRouter, _React$Component);
+  esm_inheritsLoose_inheritsLoose(BrowserRouter, _React$Component);
 
   function BrowserRouter() {
     var _this;
@@ -3652,7 +3735,7 @@ if (false) {}
 var HashRouter =
 /*#__PURE__*/
 function (_React$Component) {
-  _inheritsLoose(HashRouter, _React$Component);
+  esm_inheritsLoose_inheritsLoose(HashRouter, _React$Component);
 
   function HashRouter() {
     var _this;
@@ -3705,11 +3788,11 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
   var innerRef = _ref.innerRef,
       navigate = _ref.navigate,
       _onClick = _ref.onClick,
-      rest = objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(_ref, ["innerRef", "navigate", "onClick"]);
+      rest = esm_objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(_ref, ["innerRef", "navigate", "onClick"]);
 
   var target = rest.target;
 
-  var props = extends_extends({}, rest, {
+  var props = helpers_esm_extends_extends({}, rest, {
     onClick: function onClick(event) {
       try {
         if (_onClick) _onClick(event);
@@ -3753,7 +3836,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       replace = _ref2.replace,
       to = _ref2.to,
       innerRef = _ref2.innerRef,
-      rest = objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(_ref2, ["component", "replace", "to", "innerRef"]);
+      rest = esm_objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(_ref2, ["component", "replace", "to", "innerRef"]);
 
   return react.createElement(context.Consumer, null, function (context) {
     !context ?  false ? 0 : tiny_invariant_esm(false) : void 0;
@@ -3761,7 +3844,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
     var location = normalizeToLocation(resolveToLocation(to, context.location), context.location);
     var href = location ? history.createHref(location) : "";
 
-    var props = extends_extends({}, rest, {
+    var props = helpers_esm_extends_extends({}, rest, {
       href: href,
       navigate: function navigate() {
         var location = resolveToLocation(to, context.location);
@@ -3822,7 +3905,7 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       styleProp = _ref.style,
       to = _ref.to,
       innerRef = _ref.innerRef,
-      rest = objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
+      rest = esm_objectWithoutPropertiesLoose_objectWithoutPropertiesLoose(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
 
   return react.createElement(context.Consumer, null, function (context) {
     !context ?  false ? 0 : tiny_invariant_esm(false) : void 0;
@@ -3839,9 +3922,9 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
     }) : null;
     var isActive = !!(isActiveProp ? isActiveProp(match, currentLocation) : match);
     var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
-    var style = isActive ? extends_extends({}, styleProp, {}, activeStyle) : styleProp;
+    var style = isActive ? helpers_esm_extends_extends({}, styleProp, {}, activeStyle) : styleProp;
 
-    var props = extends_extends({
+    var props = helpers_esm_extends_extends({
       "aria-current": isActive && ariaCurrent || null,
       className: className,
       style: style,
@@ -4595,9 +4678,15 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 
 var SearchDate = function (_a) {
-    var Yes = _a.Yes, No = _a.No;
+    var isJapan = _a.isJapan;
     var _b = (0,react.useState)(null), isFounded = _b[0], setIsFounded = _b[1];
     var _c = (0,react.useState)(new Date()), date = _c[0], setDate = _c[1];
+    var headLine = { Yes: 'はい', No: 'いいえ' };
+    // displayed languages
+    if (!isJapan) {
+        headLine.Yes = 'Yes';
+        headLine.No = 'No';
+    }
     (0,react.useEffect)(function () {
         // monitoring date in real time
         var timeout = setTimeout(function () {
@@ -4614,7 +4703,7 @@ var SearchDate = function (_a) {
             clearTimeout(timeout);
         };
     }, [date]);
-    return ((0,jsx_runtime.jsx)(Section, { children: (0,jsx_runtime.jsx)(HeadLine, { children: isFounded ? Yes : No }, void 0) }, void 0));
+    return ((0,jsx_runtime.jsx)(Section, { children: (0,jsx_runtime.jsx)(HeadLine, { children: isFounded ? headLine.Yes : headLine.No }, void 0) }, void 0));
 };
 var Section = styled_components_browser_esm.section(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin-top: 120px;\n  @media screen and (min-width: ", ") {\n    margin-top: 150px;\n  }\n"], ["\n  margin-top: 120px;\n  @media screen and (min-width: ", ") {\n    margin-top: 150px;\n  }\n"])), breakPoint.sm);
 var HeadLine = styled_components_browser_esm.h1(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"], ["\n  color: ", ";\n  text-align: center;\n  font-weight: 400;\n  font-size: ", ";\n\n  @media screen and (min-width: 600px) {\n    font-size: ", ";\n  }\n  @media screen and (min-width: 1000px) {\n    font-size: ", ";\n  }\n"])), color.textDefault, fontSize.textLg, fontSize.textXl, fontSize.text2Xl);
@@ -5583,29 +5672,29 @@ var Small = styled_components_browser_esm.small(Footer_templateObject_1 || (Foot
 var LinkTo = styled_components_browser_esm.a(Footer_templateObject_2 || (Footer_templateObject_2 = Footer_makeTemplateObject(["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"], ["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"])), color.textAccent);
 var Footer_templateObject_1, Footer_templateObject_2;
 
-;// CONCATENATED MODULE: ./pages/en.tsx
+;// CONCATENATED MODULE: ./pages/English.tsx
 
 
 
 
-var en = function () {
+var English = function () {
     return ((0,jsx_runtime.jsxs)(jsx_runtime.Fragment, { children: [(0,jsx_runtime.jsx)(SEO, { title: "Is founding day of wakayama university?", description: "This is the site where you can check if today is the anniversary of Wakayama University's founding.", lang: "en", path: "/en" }, void 0),
-            (0,jsx_runtime.jsx)(SearchDate, { Yes: "Yes", No: "No" }, void 0),
+            (0,jsx_runtime.jsx)(SearchDate, {}, void 0),
             (0,jsx_runtime.jsx)(Footer, {}, void 0)] }, void 0));
 };
 
-;// CONCATENATED MODULE: ./pages/ja.tsx
+;// CONCATENATED MODULE: ./pages/Japanese.tsx
 
 
 
 
-var ja = function () {
+var Japanese = function () {
     return ((0,jsx_runtime.jsxs)(jsx_runtime.Fragment, { children: [(0,jsx_runtime.jsx)(SEO, { title: "\u548C\u6B4C\u5C71\u5927\u5B66\u306E\u5275\u7ACB\u8A18\u5FF5\u65E5\u3067\u3059\u304B\uFF1F", description: "\u4ECA\u65E5\u304C\u548C\u6B4C\u5C71\u5927\u5B66\u306E\u5275\u7ACB\u8A18\u5FF5\u65E5\u304B\u3069\u3046\u304B\u78BA\u8A8D\u3067\u304D\u308B\u30B5\u30A4\u30C8\u3067\u3059\u3002", lang: "ja", path: "/" }, void 0),
-            (0,jsx_runtime.jsx)(SearchDate, { Yes: "\u306F\u3044", No: "\u3044\u3044\u3048" }, void 0),
+            (0,jsx_runtime.jsx)(SearchDate, { isJapan: true }, void 0),
             (0,jsx_runtime.jsx)(Footer, { isJapan: true }, void 0)] }, void 0));
 };
 
-;// CONCATENATED MODULE: ./pages/notFound.tsx
+;// CONCATENATED MODULE: ./pages/NotFound.tsx
 
 
 var isDev = "production" === 'development';
@@ -5661,15 +5750,15 @@ var App_isDev = "production" === 'development';
 var BASE_URL = App_isDev ? '/' : '/is-founding-day-of-wu/';
 var App = function () {
     return ((0,jsx_runtime.jsxs)(BrowserRouter, { children: [(0,jsx_runtime.jsx)(GlobalStyle, {}, void 0),
-            (0,jsx_runtime.jsxs)(Container, { children: [(0,jsx_runtime.jsxs)(Language, { children: [(0,jsx_runtime.jsx)(StyledLink, App_assign({ to: "" + BASE_URL }, { children: "Japanese" }), void 0),
+            (0,jsx_runtime.jsxs)(Container, { children: [(0,jsx_runtime.jsxs)(Header, { children: [(0,jsx_runtime.jsx)(StyledLink, App_assign({ to: "" + BASE_URL }, { children: "Japanese" }), void 0),
                             (0,jsx_runtime.jsx)(Span, { children: "/" }, void 0),
                             (0,jsx_runtime.jsx)(StyledLink, App_assign({ to: BASE_URL + "en" }, { children: "English" }), void 0)] }, void 0),
-                    (0,jsx_runtime.jsxs)(Switch, { children: [(0,jsx_runtime.jsx)(Route, { exact: true, path: "" + BASE_URL, component: ja }, void 0),
-                            (0,jsx_runtime.jsx)(Route, { path: BASE_URL + "en", component: en }, void 0),
+                    (0,jsx_runtime.jsxs)(Switch, { children: [(0,jsx_runtime.jsx)(Route, { exact: true, path: "" + BASE_URL, component: Japanese }, void 0),
+                            (0,jsx_runtime.jsx)(Route, { path: BASE_URL + "en", component: English }, void 0),
                             (0,jsx_runtime.jsx)(Route, { path: "*", component: NotFound }, void 0)] }, void 0)] }, void 0)] }, void 0));
 };
 var Container = styled_components_browser_esm.div(App_templateObject_1 || (App_templateObject_1 = App_makeTemplateObject(["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: ", ") {\n    max-width: 400px;\n  }\n  @media screen and (min-width: ", ") {\n    max-width: 800px;\n  }\n"], ["\n  max-width: 260px;\n  margin: 60px auto 0 auto;\n\n  @media screen and (min-width: ", ") {\n    max-width: 400px;\n  }\n  @media screen and (min-width: ", ") {\n    max-width: 800px;\n  }\n"])), breakPoint.md, breakPoint.lg);
-var Language = styled_components_browser_esm.div(App_templateObject_2 || (App_templateObject_2 = App_makeTemplateObject(["\n  font-size: ", ";\n  display: flex;\n  justify-content: flex-end;\n"], ["\n  font-size: ", ";\n  display: flex;\n  justify-content: flex-end;\n"])), fontSize.textBase);
+var Header = styled_components_browser_esm.header(App_templateObject_2 || (App_templateObject_2 = App_makeTemplateObject(["\n  font-size: ", ";\n  display: flex;\n  justify-content: flex-end;\n"], ["\n  font-size: ", ";\n  display: flex;\n  justify-content: flex-end;\n"])), fontSize.textBase);
 var Span = styled_components_browser_esm.span(templateObject_3 || (templateObject_3 = App_makeTemplateObject(["\n  color: ", ";\n  font-size: ", ";\n  margin-left: 4px;\n  margin-right: 4px;\n"], ["\n  color: ", ";\n  font-size: ", ";\n  margin-left: 4px;\n  margin-right: 4px;\n"])), color.textDefault, fontSize.textBase);
 var LinkA = styled_components_browser_esm.a(templateObject_4 || (templateObject_4 = App_makeTemplateObject(["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"], ["\n  color: ", ";\n  text-decoration: none;\n  &:hover {\n    text-decoration: underline;\n  }\n  &:focus {\n    text-decoration: underline;\n  }\n"
     // add style to Link
