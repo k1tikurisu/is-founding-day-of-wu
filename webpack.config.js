@@ -19,6 +19,14 @@ module.exports = {
     historyApiFallback: {
       rewrites: [{ from: /^\/*/, to: '/index.html' }],
     },
+    // make it accessible from docker containers
+    host: '0.0.0.0',
+    port: 3000,
+    hot: true,
+    watchOptions: {
+      aggregateTimeout: 600,
+      poll: 1000,
+    },
   },
   module: {
     rules: [

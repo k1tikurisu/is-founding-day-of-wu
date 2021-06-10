@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "SET NODE_ENV=development && webpack serve --mode=development --open",
+    "dev": "NODE_ENV=development webpack serve --mode=development --open",
+    "dev:windows": "SET NODE_ENV=development && webpack serve --mode=development --open",
     "build:dev": "SET NODE_ENV=development && webpack --mode=development",
     "build": "NODE_ENV=production webpack --mode=production",
     "lint:eslint": "eslint --ext .js,.ts,.tsx --ignore-path .prettierignore .",

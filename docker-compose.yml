@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  node:
+    image: node:14.16.0
+    container_name: webpack
+    working_dir: /usr/src/app
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
