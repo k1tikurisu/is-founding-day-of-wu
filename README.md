@@ -1,6 +1,10 @@
 # Is founding day of Wakayama University?
 
-Repository for Web Design Exercises
+https://daaiki.github.io/is-founding-day-of-wu/  
+
+Storybook:  
+https://daaiki.github.io/is-founding-day-of-wu/storybook/
+
 
 ## Setup
 Use Docker
