@@ -3,14 +3,20 @@ import { useState, useEffect } from 'react'
 import { color, fontSize, breakPoint } from '../styles/Utils'
 import styled from 'styled-components'
 
-type Props = {
-  Yes: string
-  No: string
+export type Props = {
+  isJapan?: boolean
 }
 
-export const SearchDate: React.FC<Props> = ({ Yes, No }) => {
+export const SearchDate: React.FC<Props> = ({ isJapan }) => {
   const [isFounded, setIsFounded] = useState<boolean | null>(null)
   const [date, setDate] = useState(new Date())
+  const headLine = { Yes: 'はい', No: 'いいえ' }
+
+  // displayed languages
+  if (!isJapan) {
+    headLine.Yes = 'Yes'
+    headLine.No = 'No'
+  }
 
   useEffect(() => {
     // monitoring date in real time
@@ -31,7 +37,7 @@ export const SearchDate: React.FC<Props> = ({ Yes, No }) => {
 
   return (
     <Section>
-      <HeadLine>{isFounded ? Yes : No}</HeadLine>
+      <HeadLine>{isFounded ? headLine.Yes : headLine.No}</HeadLine>
     </Section>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { color, fontSize } from '../../styles/Utils'
 
-type Props = {
+export type Props = {
   isJapan?: boolean
 }
 

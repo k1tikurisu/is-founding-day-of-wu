@@ -3,7 +3,7 @@ import { SearchDate } from '../components/SearchDate'
 import { SEO } from '../components/Layouts/SEO'
 import { Footer } from '../components/Layouts/Footer'
 
-export const ja: React.FC = () => {
+export const Japanese: React.FC = () => {
   return (
     <>
       <SEO
@@ -12,7 +12,7 @@ export const ja: React.FC = () => {
         lang="ja"
         path="/"
       />
-      <SearchDate Yes="はい" No="いいえ" />
+      <SearchDate isJapan />
       <Footer isJapan />
     </>
   )

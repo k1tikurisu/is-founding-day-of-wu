@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import React from 'react'
 
-import { en } from './pages/en'
-import { ja } from './pages/ja'
-import { NotFound } from './pages/notFound'
+import { English } from './pages/English'
+import { Japanese } from './pages/Japanese'
+import { NotFound } from './pages/NotFound'
 
 import styled from 'styled-components'
-import { color, fontSize, breakPoint } from './styles/Utils'
+import { fontSize, color, breakPoint } from './styles/Utils'
 import { GlobalStyle } from './styles/GlobalStyles'
 
 // defining the env
@@ -19,14 +19,14 @@ export const App: React.FC = () => {
     <Router>
       <GlobalStyle />
       <Container>
-        <Language>
+        <Header>
           <StyledLink to={`${BASE_URL}`}>Japanese</StyledLink>
           <Span>/</Span>
           <StyledLink to={`${BASE_URL}en`}>English</StyledLink>
-        </Language>
+        </Header>
         <Switch>
-          <Route exact path={`${BASE_URL}`} component={ja} />
-          <Route path={`${BASE_URL}en`} component={en} />
+          <Route exact path={`${BASE_URL}`} component={Japanese} />
+          <Route path={`${BASE_URL}en`} component={English} />
           <Route path="*" component={NotFound} />
         </Switch>
       </Container>
@@ -46,7 +46,7 @@ const Container = styled.div`
   }
 `
 
-const Language = styled.div`
+const Header = styled.header`
   font-size: ${fontSize.textBase};
   display: flex;
   justify-content: flex-end;
