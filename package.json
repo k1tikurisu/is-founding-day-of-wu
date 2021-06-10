@@ -10,7 +10,9 @@
     "lint:eslint": "eslint --ext .js,.ts,.tsx --ignore-path .prettierignore .",
     "lint:prettier": "prettier . --check --ignore-path .prettierignore",
     "format": "yarn lint:eslint && yarn lint:prettier --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
@@ -34,6 +36,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "@types/react-helmet": "^6.1.1",
@@ -42,6 +48,7 @@
     "@types/webfontloader": "^1.6.32",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
