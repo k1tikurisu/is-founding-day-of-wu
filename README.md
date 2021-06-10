@@ -24,4 +24,4 @@ Use Node.js
   $ yarn dev:windows
 ```
 
-access http://localhost:3000
+access http://localhost:8080
