@@ -4,7 +4,7 @@ import { color, fontSize, breakPoint } from '../styles/Utils'
 import styled from 'styled-components'
 
 export type Props = {
-  isJapan?: boolean
+  isJapan: boolean
 }
 
 export const SearchDate: React.FC<Props> = ({ isJapan }) => {

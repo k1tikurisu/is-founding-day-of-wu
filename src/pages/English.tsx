@@ -12,8 +12,8 @@ export const English: React.FC = () => {
         lang="en"
         path="/en"
       />
-      <SearchDate />
-      <Footer />
+      <SearchDate isJapan={false} />
+      <Footer isJapan={false} />
     </>
   )
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { color, fontSize } from '../../styles/Utils'
 
 export type Props = {
-  isJapan?: boolean
+  isJapan: boolean
 }
 
 export const Footer: React.FC<Props> = ({ isJapan }) => {
